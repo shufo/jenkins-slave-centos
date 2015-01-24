@@ -16,7 +16,7 @@ ADD templates/supervisord.conf /etc/supervisord.conf
 ADD templates/sshd.conf /etc/supervisord.d/sshd.conf
 
 # Add user jenkins to the image
-RUN adduser --quiet jenkins
+RUN adduser jenkins
 
 # Add user jenkins to sudoers with NOPASSWD
 RUN echo "jenkins ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
