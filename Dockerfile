@@ -25,7 +25,7 @@ RUN echo "jenkins ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 RUN echo "jenkins:jenkins" | chpasswd
 
 # Set up SSH 
-RUN mkrir /var/run/sshd && mkdir /var/log/ssh
+RUN mkdir /var/run/sshd && mkdir /var/log/ssh
 
 # Set up SSH Host Key
 RUN /usr/bin/ssh-keygen -q -t rsa1 -f /etc/ssh/ssh_host_key -C '' -N ''
