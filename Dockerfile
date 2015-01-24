@@ -6,8 +6,8 @@ MAINTAINER shayashibara <meikyowise@gmail.com>
 # Install Packages
 RUN yum update -y
 RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-RUN yum install -y passwd openssh openssh-server openssh-clients sudo python-pip
-RUN yum groupinstall -y "Development Tools"
+RUN yum install -y -q passwd openssh openssh-server openssh-clients sudo python-pip
+RUN yum groupinstall -y -q "Development Tools"
 
 # Install supervisor
 RUN pip install supervisor
